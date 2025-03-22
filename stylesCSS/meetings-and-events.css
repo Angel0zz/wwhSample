@@ -1,0 +1,112 @@
+.head-banner-container:before {
+    top:40%;
+    z-index: 0;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Adjust the height of the fade effect */
+    background: linear-gradient(to bottom, transparent, rgb(0  ,0 , 0,1)); /* Create the fade effect */
+}
+
+.banner-title {
+    width: auto;
+    font-family: 'Montserrat';
+    padding: 20px 50px;
+    font-size: 3em;
+    font-weight: 300;
+    position: relative;
+    top: 230px;
+    z-index: 10; 
+    font-weight: 300;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.f-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: black;
+    padding: 40px 0 20px 80px;
+    .title{
+        font-size: 42px;
+    }
+    
+    ul {
+        li {
+            font-family: 'roboto';
+            list-style: none;
+            padding-block: 5px;
+            padding-left: 18px;
+            font-size: 17px;
+            font-weight: 300;
+        }  
+    }
+}
+
+.s-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+    align-items: center;
+    
+    button {
+        background-color: rgb(251, 204, 10);
+        width: 40%;
+        height: 50px;
+        font-size: 18px;
+        margin-bottom: 40px;
+        border: none;
+        font-weight: 500;
+        font-family: 'Montserrat';
+    }
+
+    iframe {
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+
+}
+
+.gallery-container {
+    .title{
+        font-family: 'Montserrat';
+        font-weight: 300;
+        color: black;
+        font-size: 45px;
+        text-align: center;
+        padding-block: 12px;
+    }
+
+
+    .swiper {
+        height: 300px;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+        img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover; 
+        }
+      }
+  
+        .swiper-button-next, .swiper-button-prev {
+            display: block !important; 
+            z-index: 10;
+            color: white; 
+    }
+}

@@ -1,0 +1,201 @@
+form#bookingForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1000;
+    input{
+        width: 20vw;
+        height:100%;
+        background-color:transparent;
+        color: #ffff;
+        border: 1px solid rgb(141, 141, 141);
+        border-radius: 5px;
+        font-style: italic;
+        padding-left: 5px;
+        position: relative;
+
+    }
+
+    label {
+        font-size: 80%;
+        color: #a39f9f;
+        text-shadow: 1px 1px 1px black;
+        position: relative;
+
+    }
+
+    button{
+        width: 20vw;
+        height: 100%;
+        font-weight: 400;
+        font-size: 110%;
+        border-radius: 5px;
+        background-color: #a39f9f;
+        border: none;
+        transition: 0.5s all ease-in-out;
+        position: relative;
+
+    }
+    button:hover{
+        background-color: rgb(1,1,42);
+        color: #f8f9fa;
+        position: relative;
+
+    }
+}
+
+.num-guest-modal{
+    display: none;
+    justify-content: space-between  ;
+    width: 550px;
+    height:auto ;
+    background-color: rgb(216, 216, 216);
+    color: #000000;
+    position: absolute ;
+    z-index: 10000;
+    bottom: 50%;
+    padding: 20px;
+
+}
+.num-guest-modal section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 10px;
+    align-items: center ;
+    position: relative;
+    background-color: #f8f9fa;
+    div{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center ;
+        section{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.5s ease-in-out;
+        } section:hover{
+            background: #000000;
+            color: #ddd;
+        }
+    }
+}
+.num-guest-modal section input{
+    color: #000000 !important;
+    width:40px  !important;
+    height: auto !important;
+    border: none!important;
+    font-size: 20px !important;
+    position: relative !important;
+}
+
+/*date picker*/
+.date-picker {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 250px;
+    z-index: 10;
+}
+
+
+
+/* Show when active */
+.date-picker.active {
+    display: block;
+}
+
+/* Button Styling */
+.date-picker button {
+    margin-top: 10px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: #01024e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.date-picker button:hover {
+    background-color: #0236a5;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.datepicker-labels {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkin-label {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+}
+
+.checkout-label {
+    color: rgba(1, 2, 78, 0.6);
+    font-weight: bold;
+}
+
+@media (min-width: 1608px) {
+    form#bookingForm {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3em !important;
+        z-index: 5 !important;
+        height: 30vh;
+        margin-top: 0;
+        margin-bottom: 40px;
+        
+    }
+    input{
+        width: 20vw;
+        height:100%  !important;
+        font-size: 100% !important;
+    }
+
+    .num-guest-modal{
+
+        bottom: auto;
+    
+    }
+
+}

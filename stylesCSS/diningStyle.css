@@ -1,0 +1,269 @@
+
+.head-bg{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 70vh;
+    padding: 100px;
+    width: 100;
+    background-image:url(/img-assets/agoda-2650980-47820778-710099.jpg);
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease; 
+    background-position: center;
+    background-size: cover;
+    position: inherit;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(19, 19, 19);
+        box-shadow:   5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+        font-size: 45px;
+        top: 55%;
+        position: absolute;
+        padding: 20px 50px;
+        background-color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        p{
+            font-size: small;
+           
+            
+        }
+        
+    }
+    .title::after {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Position the underline right underneath the text */
+        left: 0;
+        width: 100%;
+        height: 3px; /* Thickness of the first color line */
+        background:#e63552; /* First color of the underline */
+    }
+    
+    .title::before {
+        content: "";
+        position: absolute;
+        bottom: -8px; /* Slightly lower than the first line */
+        left: 0;
+        width: 100%;
+        height: 3px; /* Thickness of the second color line */
+        background:#fbcc0a; /* Second color of the underline */
+    }
+    
+    
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+    
+    
+    .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        font-size: 120%;
+        line-height: 150%;
+        height:180px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-family: "Quicksand", sans-serif;
+        font-weight: 100;
+    }
+    .carousel-title{
+        color: black;
+        font-size: 40px;
+
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+    }
+    .carousel-cont {
+        display: flex;
+        align-items: center;
+  
+        height: 80vh;
+        width: 100;
+        gap: 2em;
+        transition: background-image 0.5s ease; 
+        .card{
+            position: relative;
+            height: 80vh;
+            width: 20vw;
+            background-color: #fff;
+            border:1px solid #fbcc0a;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+            color: black;
+            overflow: hidden;
+            cursor: pointer;
+            .img-cont{
+                width: 100%;
+                height: 70%;
+                background-color: #fbcc0a;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text{
+                display: flex;
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                padding-top: 30px;
+                padding-inline: 20px;
+                text-align: center;
+            }
+            .details{
+                position:relative;
+                top: 100%;
+                padding: 30px;
+                font-weight: 300;
+                background-color: rgba(0, 0, 0,0.4);
+                color: #fff;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                transition: 0.5s ease-in-out;
+   
+            }
+        }
+
+    }
+
+    .card:hover .details{
+        top: -81.5%;
+    }
+    .list-cont{
+        
+        .f-cont{
+            display: flex;
+            width: 75vw;
+            height: auto;
+ 
+            .s-cont{
+                width: 100%;
+                position: relative;
+
+            }
+            .t-cont{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: relative;
+                
+                .q-cont{
+                    padding: 0 10px;
+                    width: 100%;
+                    height: 100%;
+
+                }
+                .w-cont{
+                    padding: 10px;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+
+            }
+        }
+        .title{
+            font-style: italic;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .dining-info{
+            font-family: 'Quicksand';
+
+            line-height: 95%;
+            font-size: 14px;
+            color: rgb(53, 53, 53);
+        }
+    }
+
+
+}
+
+.img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+    pointer-events: none; /* Ensures the image can still be interacted with */
+}
+
+
+.img-wrapper {
+    position: relative;
+    height: 70%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+}
+
+.img-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)); /* Dark gradient */
+    z-index: 1;
+}
+
+.s-cont,.q-cont,.w-cont{
+
+    transition: 0.2s all ease-in-out;
+}
+
+
+
+
+.text-divider-cont{
+    height: auto;
+    width: 100%;
+    color: black;
+    display: flex;
+    padding: 20px;
+    
+    .text-cont{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+
+        p{
+            color: rgb(53, 53, 53);
+            span{
+                font-size: 28px;
+                font-family: Montserrat;
+                font-weight: 600;
+                
+            }
+        }
+    }
+}

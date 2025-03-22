@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        .FromContainer {
+            width: 100%;
+            height: 100vh;
+            background-image: url('/img-assets/279951970.jpg');
+            transition: background-image 0.5s ease; 
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 20px;
+            cursor: pointer;
+            background-image: none;
+        
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="FromContainer"></div>
+    <ul>
+        <li data-bg="279951970.jpg">Link 1</li>
+        <li data-bg="6456470ee56faffec8630e2e3e874b48.jpg">Link 2</li>
+        <li data-bg="agoda-2650980-47820778-710099.jpg">Link 3</li>
+        <li data-bg="wynwood-hotel--multiple-use-pasig-20240323074847565400.jpg">Link 4</li>
+    </ul>
+
+    <!-- Form -->
+    <form id="bookingForm">
+        <label for="adults">Number of Adults:</label>
+        <input type="number" id="adults" name="adults" placeholder="Number of adults" min="1" value="1" required><br><br>
+
+        <label for="children">Number of Children:</label>
+        <input type="number" id="children" name="children" placeholder="Number of children" min="0" value="0" required><br><br>
+
+        <label for="infants">Number of Infants:</label>
+        <input type="number" id="infants" name="infants" placeholder="Number of infants" min="0" value="0" required><br><br>
+
+        <label for="checkInDate">Check-in Date:</label>
+        <input type="date" id="checkInDate" name="checkInDate" required><br><br>
+
+        <label for="checkOutDate">Check-out Date:</label>
+        <input type="date" id="checkOutDate" name="checkOutDate" required><br><br>
+
+        <button type="button" onclick="passData()">Submit</button>
+    </form>
+
+
+    <div class="date-modal-button"   style="display: flex; padding: 5px 5px; border: 1px solid black; width: 200px;">
+        <section style="display: flex;  justify-content: space-between;">   
+            <section>Check in - Check out</section>  
+
+            <section>asd</section>
+
+        </section>
+    </div>
+
+    <script>
+
+        const listItems = document.querySelectorAll('section');
+        const fromContainer = document.querySelector('.FromContainer');
+
+        // Adding hover effect to each li
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const bgImage = item.getAttribute('data-bg');
+                fromContainer.style.backgroundImage = `url('/img-assets/${bgImage}')`;
+            });
+
+            item.addEventListener('mouseleave', function() {
+                // Reset to default image when mouse leaves the list item
+                fromContainer.style.backgroundImage = 'url("/img-assets/279951970.jpg")';
+            });
+        });
+
+        // redirect function papunta sa third party booking link
+        function passData() {
+            event.preventDefault(); 
+
+            const adults = document.getElementById('adults').value || 1;
+            const children = document.getElementById('children').value || 0;
+            const infants = document.getElementById('infants').value || 0;
+            const checkInDate = document.getElementById('checkInDate').value;
+            const checkOutDate = document.getElementById('checkOutDate').value;
+
+
+            const baseURL = "https://book-directonline.com/properties/wynwoodhotelmaniladirect?locale=en";
+            const items = `&items[0][adults]=${encodeURIComponent(adults)}&items[0][children]=${encodeURIComponent(children)}&items[0][infants]=${encodeURIComponent(infants)}`;
+            const currency = "&currency=PHP";
+            const trackPage = "&trackPage=yes";
+            const checkInParam = "&checkInDate=" + encodeURIComponent(checkInDate);
+            const checkOutParam = "&checkOutDate=" + encodeURIComponent(checkOutDate);
+
+            const finalURL = baseURL + items + currency + trackPage + checkInParam + checkOutParam;
+
+
+            window.location.href = finalURL;
+        }
+    </script>
+
+</body>
+</html>

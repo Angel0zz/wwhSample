@@ -1,0 +1,68 @@
+.collection {
+    height:75vh;
+    background-color: #1e232e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-image 0.6s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .content img {
+        width: 100%;
+    
+    }
+    
+    .text-content {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(0, 0, 0);
+    }
+    
+    
+    .text-content p {
+    
+        max-width: 22rem;
+        font-size: .7rem;
+    
+        text-align: center;
+        color: rgb(20, 20, 20);
+    
+    }
+}
+
+.collection .swiper-slide {
+    
+    transition: transform 1s ease-in-out, opacity 0.6s ease-in-out; /* Add smooth transition on slide change */
+}
+
+.collection .content {
+    color: black;
+    height: 29rem;
+    width: 22rem;
+    background-color: #efefef;
+    margin:3rem; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: 2px solid white;
+    h3 {
+        text-align: center;
+        position: relative;
+        font-family: 'Quicksand';
+        font-weight: 300;
+        top: -28px;
+        font-size: 1.7rem;
+
+        color: black;
+    }
+    
+}
+
