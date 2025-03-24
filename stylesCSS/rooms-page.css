@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70%; /* Adjust the height of the fade effect */
+    height: 70%;
     background: linear-gradient(to bottom, transparent, rgb(0  ,0 , 0,1)); /* Create the fade effect */
 }
     
@@ -256,6 +256,7 @@
         }
 
         button {
+            background-color: rgb(237, 237, 237);
             padding: 15px;
             width: 130px;
             font-size: 15px;

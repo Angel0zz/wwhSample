@@ -103,10 +103,10 @@
         .hero-name::before {
             content: "";
             position: absolute;
-            bottom: 0; /* Position it at the bottom */
-            width: 70px; /* Adjust the length of the underline */
-            height: 2px; /* Thickness of the underline */
-            background-color: #000; /* Color of the underline */
+            bottom: 0; 
+            width: 70px; 
+            height: 2px; 
+            background-color: #000; 
         }
     }
 }
