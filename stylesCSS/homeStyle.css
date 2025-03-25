@@ -186,19 +186,21 @@ html{
         justify-content: center;
         align-items: center;
         color: rgb(90, 90, 90);
-        width: 30%;
+        width: 50%;
         height: 60%;
         
         
         img{
+            margin-left: 150px;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
     section.text-img-cont{
-        display: grid;
-        grid-template-columns: auto auto;
+        img{
+            width: 100%;
+        }
     }
 }
 .por-container{
