@@ -77,8 +77,7 @@ function passData() {
     const checkInDate = document.getElementById('checkin-date').value;
     const checkOutDate = document.getElementById('checkout-date').value;
 
-    // Infants will be set directly in the URL as 0
-    const infants = 0;  // Set directly since no input field is provided
+    const infants = 0; 
 
     const baseURL = "https://book-directonline.com/properties/wynwoodhotelmaniladirect?locale=en";
     const items = `&items[0][adults]=${encodeURIComponent(adults)}&items[0][children]=${encodeURIComponent(children)}&items[0][infants]=${encodeURIComponent(infants)}`;

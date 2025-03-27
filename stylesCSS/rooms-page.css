@@ -77,6 +77,10 @@
     }
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .instructions-container {
     display: flex;
     flex-direction: column;
