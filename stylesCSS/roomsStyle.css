@@ -21,8 +21,7 @@
     background-color: black;
     color: white;
     font-size: 48px;
-    padding-left: 60px;
-    padding-top: 40px;
+    padding: 0 60px 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,18 +32,16 @@
 }
 
 .text p {
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.5;
 }
 
 .container {
     height: 30vh;
     background-color: black; 
     display: flex;
-    padding: 30px 0 0 60px;
-    padding-bottom: 20px;
+    padding: 0 0 0 60px;
 }
 
 
@@ -58,7 +55,6 @@
     align-items: center;
     text-align: center;
     border-radius: 8px;
-    padding: 20px;
     background-color: #444; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
@@ -71,7 +67,7 @@
     span {
         font-family: "Noto Serif";
         font-weight: 700;
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
@@ -85,8 +81,7 @@
 
     .title{
         font-size: 45px;
-        padding-left: 60px;
-        padding-top: 40px;
+        padding: 0 60px 30px 40px;
     }
 
 
@@ -118,8 +113,7 @@
 
 .amenities-container {
     background-color: #000;
-    padding-left: 60px;
-    padding-top: 40px;
+    padding: 55px 60px 30px 40px;
     height: auto;
     position: relative; 
     overflow: hidden;
@@ -136,8 +130,6 @@
 ul {
     padding-left: 40px;
     margin-bottom: 40px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid gray;
     width: calc(100% - 40px);
     margin-right: auto;
     display: grid;
@@ -280,11 +272,15 @@ li:hover {
             font-size: 15px;
             border: none;
             font-weight: 550;
+            background-color: #1D1C1A;
+            color: white;
         }
     }
 
     button:hover{
         cursor: pointer;
+        font-size: 18px;
+        transition: ease-in-out 0.2s;
     }
 
     .card:hover {
@@ -301,6 +297,7 @@ li:hover {
 /* RESPONSIVE VIEW */
 @media (max-width: 600px) { 
     .text {
+        height: 130px;
         padding: 0 0 0 20px;        
         font-size: 36px;
 
@@ -312,13 +309,15 @@ li:hover {
     
     .container {
         padding: 0;
+        height: 140px;
         .main-details-container {
             gap: 2em;
             height: 100px;
-            margin-top: 20px;
+            
                         
             .room-size, .bed-type, .max-persons{
                 font-size: 12px;
+                padding-inline: 9px;
 
                 span {
                     font-size: 12px;
@@ -328,16 +327,17 @@ li:hover {
     }
 
     .amenities-container {   
-        padding: 0 0 0 20px;  
+        padding: 0 0 0 20px;
+
         .title {
-            padding-top: 20px;        
+            padding: 40px 0 30px 0;        
             font-size: 36px;
         }
 
         .list {
             li {
-                font-size: 18px;
-                padding: 2px;
+                font-size: 15px;
+                padding-inline: 10px;
             }
         }
     }
@@ -357,7 +357,7 @@ li:hover {
 
         .card {
             width: 300px;
-            height: 100vh;
+            height: 70vh;
 
 
             .card-bg {
