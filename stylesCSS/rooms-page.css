@@ -21,15 +21,6 @@
     background: linear-gradient(to bottom, transparent, rgb(0  ,0 , 0,1)); /* Create the fade effect */
 }
     
-.room-img-container img {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    justify-content: center;
-    position:absolute;
-    z-index: inherit;
-}
 
 .form-main-container{
     display: flex;
@@ -343,13 +334,11 @@
 
 @media (max-width: 600px) {
     .room-img-container {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        img {
-            width: 100%;
-        }
+        min-height: 600px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 10;
 
         .room-img-text {
             font-size: 36px;
@@ -358,11 +347,50 @@
             z-index: 10;
         }
     }
+
+    .form-main-container {
+        width: 90vw;
+        height: auto;
+        padding: 15px;
+        top: -100px;
+    }
+
+    #form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form-container section {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    #form-container input {
+        width: 100%;
+        max-width: 300px;
+        padding-bottom: 15px;
+    }
+    
+    #form-container button {
+        width: 100%; 
+        max-width: 600px; 
+    }
+
+    .instructions-container {
+        display: none;
+    }
+
     .container {
         .container-text {
             font-size: 36px;
+            height: 35vh;
+
             p {
                 font-size: 18px;
+                text-align: left;
+                width: 70%;
             }
         }
     }
@@ -377,7 +405,7 @@
 
         .card {
             width: 300px;
-            height: 95vh;
+            height: 65vh;
 
             .card-bg {
                 width: 220px;
