@@ -288,10 +288,11 @@ html{
 
             section{
                 width: 50%;
-                padding-inline: 11%;
+                padding-inline: 9%;
                 text-align: justify;
                 color: rgb(213, 212, 224);
                 font-weight: 300;
+                font-size: 18px;
             }
         }
         
