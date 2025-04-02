@@ -51,5 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
       else if (currentPath.startsWith("/pages/rooms-sub-pages/") && linkPath === "/pages/rooms.html") {
         link.classList.add("active");
     }
+    else if (currentPath.startsWith("/pages/promos-sub-pages/") && linkPath === "/pages/promo.html") {
+      link.classList.add("active");
+  }
   });
 });
