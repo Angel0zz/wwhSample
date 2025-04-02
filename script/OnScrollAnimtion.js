@@ -32,3 +32,24 @@ listItems.forEach(item => {
       fromContainer.style.backgroundcolor = 'radial-gradient(circle, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%),url("/img-assets/279951970.jpg")';
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let currentPath = window.location.pathname.toLowerCase(); // Get current page path in lowercase
+  let navLinks = document.querySelectorAll("section a"); 
+  navLinks.forEach(link => {
+      let linkPath = link.getAttribute("href").toLowerCase(); 
+
+    
+      if (currentPath.endsWith("/") && linkPath === "/index.html") {
+          link.classList.add("active");
+      } 
+      else if (currentPath === linkPath) {
+          link.classList.add("active");
+      }
+
+      else if (currentPath.startsWith("/pages/rooms-sub-pages/") && linkPath === "/pages/rooms.html") {
+        link.classList.add("active");
+    }
+  });
+});
