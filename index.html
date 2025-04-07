@@ -58,15 +58,15 @@
             <form id="bookingForm" >
                 <section>
                     <label id="checkin-checkout-label">Check-in - Check-out</label><br>
-                    <input type="Text" id="checkin-checkout" name="checkInDate" readonly value="Check-in - Check-out">
+                    <input type="Text" id="checkin-checkout"  readonly value="Check-in - Check-out">
                     
                     
                     <div id="date-picker-modal" class="modal">
                         <div class="modal-header">Check-in Date</div>
-                        <input type="date" id="checkin-date">
-                    
+                        <input type="date" id="checkInDate" name="checkin-date" required>
+
                         <div class="modal-header">Check-out Date</div>
-                        <input type="date" id="checkout-date">
+                        <input type="date" id="checkOutDate" name="checkout-date" req>
                     </div>
                 
                 </section>
@@ -340,6 +340,25 @@
     <script src="/script/HServicesSlides.js"></script>
     
     <script>
+        function passData() {
+            event.preventDefault(); 
+            
+            const adults = document.getElementById('Adults').value || 1;
+            const children = document.getElementById('Children').value || 0;
+            const checkInDate = document.getElementById('checkInDate').value; 
+            const checkOutDate = document.getElementById('checkOutDate').value;
+            const infants = 0; 
+            
+            const baseURL = "https://book-directonline.com/properties/wynwoodhotelmaniladirect?locale=en";
+            const items = `&items[0][adults]=${encodeURIComponent(adults)}&items[0][children]=${encodeURIComponent(children)}&items[0][infants]=${encodeURIComponent(infants)}`;
+            const currency = "&currency=PHP";
+            const trackPage = "&trackPage=yes";
+            const checkInParam = "&checkInDate=" + encodeURIComponent(checkInDate);
+            const checkOutParam = "&checkOutDate=" + encodeURIComponent(checkOutDate);
+
+            const finalURL = baseURL + items + currency + trackPage + checkInParam + checkOutParam;
+            window.location.href = finalURL;
+        }
 
     </script>
 </body>
