@@ -66,7 +66,7 @@
     </div>
 
     <div class="s-content">
-        <button>Inquiry Form</button>
+        <button onclick="openForm()">Inquiry Form</button>
         <iframe width="520" height="315"
             src="https://www.youtube.com/embed/Ww7Nvt5LYNk?si=_cO6bK8QrKIEVtnn&autoplay=1&loop=1&mute=1&playlist=Ww7Nvt5LYNk"
             title="YouTube video player"
@@ -75,10 +75,55 @@
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
         </iframe>
-
     </div>
-
 </div>
+
+    <div class="popup-form" id="popupForm">
+        <div class="form-content">
+            <h2>Meetings and Events</h2>
+            <form action="">
+                <section>
+                    <input type="text" name="name" id="name" placeholder="Name *" required>
+                    <input type="text" name="company" id="company" placeholder="Company *" required>
+                    <input type="email" name="email" id="email" placeholder="Email *" required>
+                </section>
+                <section>
+                    <input type="number" name="telephone" id="telephone" placeholder="Telephone *" required>
+                    <select name="event-type" id="event-type" required>
+                        
+                        <option value="">Type of Event</option>
+                        <option value="corporate-meeting">Corporate Meeting</option>
+                        <option value="social-banquet">Social Banquet</option>
+                    </select>
+                    <input type="number" name="number-pax" id="number-pax" placeholder="Number of Pax *" required>
+                </section>
+                <section>
+                    <!-- Only 2 inputs -->
+                    <input type="text" id="start-date" class="custom-date" placeholder="Start Date *" readonly required>
+                    <input type="text" id="end-date" class="custom-date" placeholder="End Date *" readonly required>
+                    
+                    <!-- 1 hidden real date picker -->
+                    <input type="date" id="real-picker" hidden>
+
+
+                    <select name="set-up" id="set-up" required>
+                        <option value="">Set-up</option>
+                        <option value="round">Round</option>
+                        <option value="classroom">Classroom</option>
+                        <option value="boardroom">Boardroom</option>
+                        <option value="u-shape">U-Shape</option>
+                        <option value="cocktail-reception">Cocktail Reception</option>
+                        <option value="theatre">Theatre</option>
+                        <option value="other">Other</option>
+                    </select>
+                </section>
+
+                <textarea name="" id="" cols="65" rows="5" placeholder="Special Instruction"></textarea>
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
 
     <div class="gallery-container">
         <div class="title">
@@ -125,5 +170,35 @@
         </div>
 
     </footer>
+
+    <script>
+const startInput = document.getElementById('start-date');
+  const endInput = document.getElementById('end-date');
+  const realPicker = document.getElementById('real-picker');
+
+  let activeInput = null;
+
+  startInput.addEventListener('click', () => {
+    activeInput = startInput;
+    realPicker.showPicker();
+  });
+
+  endInput.addEventListener('click', () => {
+    activeInput = endInput;
+    realPicker.showPicker();
+  });
+
+  realPicker.addEventListener('change', () => {
+    if (activeInput) {
+      // Optional formatting: YYYY-MM-DD → MMM DD, YYYY
+      const date = new Date(realPicker.value);
+      activeInput.value = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit'
+      });
+    }
+  });
+    </script>
 </body>
 </html>
