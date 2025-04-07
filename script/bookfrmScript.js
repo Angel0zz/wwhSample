@@ -83,8 +83,8 @@ function passData() {
     const items = `&items[0][adults]=${encodeURIComponent(adults)}&items[0][children]=${encodeURIComponent(children)}&items[0][infants]=${encodeURIComponent(infants)}`;
     const currency = "&currency=PHP";
     const trackPage = "&trackPage=yes";
-    const checkInParam = "&checkInDate=" + encodeURIComponent(checkInDate);
-    const checkOutParam = "&checkOutDate=" + encodeURIComponent(checkOutDate);
+    const checkInParam = "&checkin-date=" + encodeURIComponent(checkInDate);
+    const checkOutParam = "&checkout-date=" + encodeURIComponent(checkOutDate);
 
     const finalURL = baseURL + items + currency + trackPage + checkInParam + checkOutParam;
 
