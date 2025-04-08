@@ -27,7 +27,6 @@
             <a href="/pages/rooms.html">Rooms</a>
             <a href="/pages/Dining-page.html">Dinings</a>
             <a href="/pages/Meetings-page.html">Meetings & Events</a>
-            <a href="/pages/promo.html">Promos</a>
             <a href="index.html#services">Services</a>
         </section>
 
@@ -46,89 +45,88 @@
               <a href="https://x.com/WynwoodHotel"> <i class="fa-solid fa-envelope"></i></a>  
             </section>
         </div>
-
-        
-     
         <!-- Booking form-->
-        <div>
-            <form id="bookingForm" >
-                <div class="title" style="font-size: 30px; font-style: italic;">Hospitality throught prism</div>
-                <section>
-                    <label id="checkin-checkout-label">Check-in - Check-out</label><br>
-                    <input type="Text" id="checkin-checkout"  readonly value="Check-in - Check-out">
+         <div style="display: flex; flex-direction: column; gap: 2em;">
+            <div>
+                <form id="bookingForm" >
+                    <section>
+                        <label id="checkin-checkout-label">Check-in - Check-out</label><br>
+                        <input type="Text" id="checkin-checkout" name="checkInDate" readonly value="Check-in - Check-out">
+                        
+                        
+                        <div id="date-picker-modal" class="modal">
+                            <div class="modal-header">Check-in Date</div>
+                            <input type="date" id="checkin-date">
+                        
+                            <div class="modal-header">Check-out Date</div>
+                            <input type="date" id="checkout-date">
+                        </div>
                     
-                    
-                    <div id="date-picker-modal" class="modal">
-                        <div class="modal-header">Check-in Date</div>
-                        <input type="date" id="checkInDate" name="checkin-date" required>
-
-                        <div class="modal-header">Check-out Date</div>
-                        <input type="date" id="checkOutDate" name="checkout-date" req>
-                    </div>
-                
-                </section>
-
-                <section>
-                    <label for="">Guests</label><br>
-                    <input type="text" class="num-guest-selector" id="num-guest-selector" readonly  onclick="PickNumberofGuest()">
-                
-                    <section class="num-guest-modal" id="num-guest-modal" >
-                        <section>
-                            <label for="">number of adult</label><br>
-                            <div>
-                                <input type="number" id="Adults" name="Adults" placeholder="Number of adults" min="1" value="1"  readonly>Adults
-                                <section onclick="updateValue('Adults', 'increment')">+</section>
-                                <section onclick="updateValue('Adults', 'decrement')">-</section>
-                            </div>
-
-                          
-                        </section>
-                
-                        <section>
-                            <label for="">number of children</label><br>
-                            <div style="border-inline:  1px solid black;">
-                                <input type="number" id="Children" name="Children" placeholder="Number of children" min="0" value="0"  readonly>Children
-                                <section onclick="updateValue('Children', 'increment')">+</section>
-                                <section onclick="updateValue('Children', 'decrement')">-</section>
-                            </div>
-                        </section>
-
-
-                        <section style="padding-block: 20px; display: flex;">
-                           <span style="font-size: 10px;">Total number of Guests</span> <br><section style="height: 30px; width: 80px;font-size: 15px; "  onclick="updateGuestCount()">Update</section>
-                        </section>
                     </section>
-                  
-                </section>                
-
- 
-
-                <section>
-                    <label for="">  Promo Code(if applicable)</label> <br>
-                  
-                    <input type="text" placeholder="Enter Promo Code">
-                </section>
+    
+                    <section>
+                        <label for="">Guests</label><br>
+                        <input type="text" class="num-guest-selector" id="num-guest-selector" readonly  onclick="PickNumberofGuest()">
+                    
+                        <section class="num-guest-modal" id="num-guest-modal" >
+                            <section>
+                                <label for="">number of adult</label><br>
+                                <div>
+                                    <input type="number" id="Adults" name="Adults" placeholder="Number of adults" min="1" value="1"  readonly>Adults
+                                    <section onclick="updateValue('Adults', 'increment')">+</section>
+                                    <section onclick="updateValue('Adults', 'decrement')">-</section>
+                                </div>
+    
+                              
+                            </section>
+                    
+                            <section>
+                                <label for="">number of children</label><br>
+                                <div style="border-inline:  1px solid black;">
+                                    <input type="number" id="Children" name="Children" placeholder="Number of children" min="0" value="0"  readonly>Children
+                                    <section onclick="updateValue('Children', 'increment')">+</section>
+                                    <section onclick="updateValue('Children', 'decrement')">-</section>
+                                </div>
+                            </section>
+    
+    
+                            <section style="padding-block: 20px; display: flex;">
+                               <span style="font-size: 10px;">Total number of Guests</span> <br><section style="height: 30px; width: 80px;font-size: 15px; "  onclick="updateGuestCount()">Update</section>
+                            </section>
+                        </section>
+                      
+                    </section>                
+    
+     
+    
+                    <section>
+                        <label for="">  Promo Code(if applicable)</label> <br>
+                      
+                        <input type="text" placeholder="Enter Promo Code">
+                    </section>
+            
+           
+                    <section>
+                      <br>
+                        <button type="button" onclick="passData()">Check Availability</button>
+                    </section>
+                    
+                </form>
+    
+            </div>
+            <!-- Booking form end-->
+    
+            <!--On screen nav-->
+            <div class="main-nav-container" id="main-nav-container" style="z-index: 10;">
+               <a href="/index.html"><section   class="nav-link"  data-bg="wwh.jpg"><i class="fa-regular fa-building"></i> <br><span>Home</span> </section></a>
+               <a href="/pages/rooms.html"><section class="nav-link" data-bg="room-home-bg.jpg"><i class="fa-solid fa-house"></i><br> <span>Hotel Rooms</span></section></a> 
+               <a href="/pages/Dining-page.html"><section  class="nav-link" data-bg="agoda-2650980-47820778-710099.jpg"><i class="fa-solid fa-utensils"></i><br> <span>Dining</span></section></a> 
+               <a href="/pages/Meetings-page.html"><section class="nav-link" data-bg="meet-G.jpg"><i class="fa-regular fa-handshake"></i><br> <span>Meetings & Events</span> </section></a>
+               <a href="#services"><section class="nav-link" data-bg="ser-house-service.jpg">  <i class="fa-solid fa-w"></i><br> <span>Services we offer</span></section></a>
+               <a href=""><section class="nav-link"><i class="fa-solid fa-phone"></i><br><span>Contact Us</span></section></a>
+            </div>
+         </div>
         
-       
-                <section>
-                  <br>
-                    <button type="button" onclick="passData()">Submit</button>
-                </section>
-                
-            </form>
-
-        </div>
-        <!-- Booking form end-->
-
-        <!--On screen nav-->
-        <div class="main-nav-container" id="main-nav-container" style="z-index: 1000;">
-           <a href="/index.html"><section   class="nav-link"  data-bg="wwh.jpg"><i class="fa-regular fa-building"></i> <br><span>Home</span> </section></a>
-           <a href="/pages/rooms.html"><section class="nav-link" data-bg="room-home-bg.jpg"><i class="fa-solid fa-house"></i><br> <span>Hotel Rooms</span></section></a> 
-           <a href="/pages/Dining-page.html"><section  class="nav-link" data-bg="agoda-2650980-47820778-710099.jpg"><i class="fa-solid fa-utensils"></i><br> <span>Dining</span></section></a> 
-           <a href="/pages/Meetings-page.html"><section class="nav-link" data-bg="meet-G.jpg"><i class="fa-regular fa-handshake"></i><br> <span>Meetings & Events</span> </section></a>
-           <a href="#services"><section class="nav-link" data-bg="ser-house-service.jpg">  <i class="fa-solid fa-w"></i><br> <span>Services we offer</span></section></a>
-           <a href=""><section class="nav-link"><i class="fa-solid fa-phone"></i><br><span>Contact Us</span></section></a>
-        </div>
         <!--On screen nav end-->
 
     </div>
@@ -336,27 +334,5 @@
     <script src="/script/OnScrollAnimtion.js"></script>
     <script src="/script/HServicesSlides.js"></script>
     
-    <script>
-        function passData() {
-            event.preventDefault(); 
-            
-            const adults = document.getElementById('Adults').value || 1;
-            const children = document.getElementById('Children').value || 0;
-            const checkInDate = document.getElementById('checkInDate').value; 
-            const checkOutDate = document.getElementById('checkOutDate').value;
-            const infants = 0; 
-            
-            const baseURL = "https://book-directonline.com/properties/wynwoodhotelmaniladirect?locale=en";
-            const items = `&items[0][adults]=${encodeURIComponent(adults)}&items[0][children]=${encodeURIComponent(children)}&items[0][infants]=${encodeURIComponent(infants)}`;
-            const currency = "&currency=PHP";
-            const trackPage = "&trackPage=yes";
-            const checkInParam = "&checkInDate=" + encodeURIComponent(checkInDate);
-            const checkOutParam = "&checkOutDate=" + encodeURIComponent(checkOutDate);
-
-            const finalURL = baseURL + items + currency + trackPage + checkInParam + checkOutParam;
-            window.location.href = finalURL;
-        }
-
-    </script>
 </body>
 </html>
