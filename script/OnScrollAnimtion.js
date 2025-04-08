@@ -13,3 +13,27 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let currentPath = window.location.pathname.toLowerCase(); // Get current page path in lowercase
+  let navLinks = document.querySelectorAll("section a"); 
+  navLinks.forEach(link => {
+      let linkPath = link.getAttribute("href").toLowerCase(); 
+
+    
+      if (currentPath.endsWith("/") && linkPath === "/index.html") {
+          link.classList.add("active");
+      } 
+      else if (currentPath === linkPath) {
+          link.classList.add("active");
+      }
+
+      else if (currentPath.startsWith("/pages/rooms-sub-pages/") && linkPath === "/pages/rooms.html") {
+        link.classList.add("active");
+    }
+    else if (currentPath.startsWith("/pages/promos-sub-pages/") && linkPath === "/pages/promo.html") {
+      link.classList.add("active");
+  }
+  });
+});

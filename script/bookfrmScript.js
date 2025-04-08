@@ -1,11 +1,24 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     let checkinCheckoutInput = document.getElementById("checkin-checkout");
+    let checkInDateInput = document.getElementById("checkInDate");
+    let checkOutDateInput = document.getElementById("checkOutDate");
 
-    // Initialize Flatpickr with "range" mode for check-in & check-out
+   
     checkinCheckoutInput.flatpickr({
         mode: "range", // Allows selecting both Check-in and Check-out
         dateFormat: "Y-m-d",
+        onChange: function (selectedDates, dateStr, instance) {
+            // Update the values of check-in and check-out date inputs
+            if (selectedDates.length === 2) {
+                // Manually adjust the date to local timezone to prevent offset issues
+                let checkInDate = new Date(selectedDates[0]);
+                let checkOutDate = new Date(selectedDates[1]);
+
+                // Format the dates to YYYY-MM-DD
+                checkInDateInput.value = formatDate(checkInDate);
+                checkOutDateInput.value = formatDate(checkOutDate);
+            }
+        },
         onOpen: function (selectedDates, dateStr, instance) {
             setTimeout(() => {
                 let calendar = instance.calendarContainer;
@@ -22,7 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Function to format the date to YYYY-MM-DD
+    function formatDate(date) {
+        let day = ("0" + date.getDate()).slice(-2);  // Ensure two digits for day
+        let month = ("0" + (date.getMonth() + 1)).slice(-2);  // Ensure two digits for month
+        let year = date.getFullYear();
+
+        return `${year}-${month}-${day}`;
+    }
 });
+
 
 function PickNumberofGuest() {
     var modal = document.getElementById('num-guest-modal');
@@ -69,24 +91,4 @@ function PickNumberofGuest() {
     document.getElementById('num-guest-modal').style.display = 'flex';
 }
 
-function passData() {
-    event.preventDefault(); 
 
-    const adults = document.getElementById('Adults').value || 1;
-    const children = document.getElementById('Children').value || 0;
-    const checkInDate = document.getElementById('checkin-date').value;
-    const checkOutDate = document.getElementById('checkout-date').value;
-
-    const infants = 0; 
-
-    const baseURL = "https://book-directonline.com/properties/wynwoodhotelmaniladirect?locale=en";
-    const items = `&items[0][adults]=${encodeURIComponent(adults)}&items[0][children]=${encodeURIComponent(children)}&items[0][infants]=${encodeURIComponent(infants)}`;
-    const currency = "&currency=PHP";
-    const trackPage = "&trackPage=yes";
-    const checkInParam = "&checkInDate=" + encodeURIComponent(checkInDate);
-    const checkOutParam = "&checkOutDate=" + encodeURIComponent(checkOutDate);
-
-    const finalURL = baseURL + items + currency + trackPage + checkInParam + checkOutParam;
-
-    window.location.href = finalURL;
-}
