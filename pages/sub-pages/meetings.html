@@ -6,6 +6,7 @@
     <link rel="icon" href="/img-assets/logo-long.png">
     <link rel="stylesheet" href="/stylesCSS/meetings-and-events.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wynwood - Meetings</title>
 </head>
@@ -66,7 +67,7 @@
     </div>
 
     <div class="s-content">
-        <button onclick="openForm()">Inquiry Form</button>
+        <button id="openForm">Inquiry Form</button>
         <iframe width="520" height="315"
             src="https://www.youtube.com/embed/Ww7Nvt5LYNk?si=_cO6bK8QrKIEVtnn&autoplay=1&loop=1&mute=1&playlist=Ww7Nvt5LYNk"
             title="YouTube video player"
@@ -78,7 +79,8 @@
     </div>
 </div>
 
-    <div class="popup-form" id="popupForm">
+    <div class="popupForm" id="popupForm">
+        <span class="closeForm" id="closeForm">&times;</span>
         <div class="form-content">
             <h2>Meetings and Events</h2>
             <form action="">
@@ -99,11 +101,9 @@
                 </section>
                 <section>
                     <!-- Only 2 inputs -->
-                    <input type="text" id="start-date" class="custom-date" placeholder="Start Date *" readonly required>
-                    <input type="text" id="end-date" class="custom-date" placeholder="End Date *" readonly required>
+                    <input type="datetime-local" id="start-date" class="start-date" placeholder="Start Date *" required>
+                    <input type="datetime-local" id="end-date" class="end-date"  placeholder="End Date *" required>
                     
-                    <!-- 1 hidden real date picker -->
-                    <input type="date" id="real-picker" hidden>
 
 
                     <select name="set-up" id="set-up" required>
@@ -120,7 +120,7 @@
 
                 <textarea name="" id="" cols="65" rows="5" placeholder="Special Instruction"></textarea>
 
-                <button>Submit</button>
+                <button id = "openForm">Submit</button>
             </form>
         </div>
     </div>
@@ -150,10 +150,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/script/OnScrollAnimtion.js"></script>
-    <script src="/script/roomsSlides.js"></script>
-
     <footer>
         <div class="img-footer">
             <img src="/img-assets/logo-light-1.png" alt="">
@@ -171,34 +167,31 @@
 
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/script/OnScrollAnimtion.js"></script>
+    <script src="/script/roomsSlides.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script>
-const startInput = document.getElementById('start-date');
-  const endInput = document.getElementById('end-date');
-  const realPicker = document.getElementById('real-picker');
-
-  let activeInput = null;
-
-  startInput.addEventListener('click', () => {
-    activeInput = startInput;
-    realPicker.showPicker();
-  });
-
-  endInput.addEventListener('click', () => {
-    activeInput = endInput;
-    realPicker.showPicker();
-  });
-
-  realPicker.addEventListener('change', () => {
-    if (activeInput) {
-      // Optional formatting: YYYY-MM-DD → MMM DD, YYYY
-      const date = new Date(realPicker.value);
-      activeInput.value = date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: '2-digit'
-      });
-    }
-  });
+        flatpickr("input[type=datetime-local]", {});
     </script>
+
+    <script>
+        const openBtn = document.getElementById("openForm");
+        const closeBtn = document.getElementById("closeForm");
+        const popupForm = document.getElementById("popupForm");
+
+        openBtn.addEventListener("click", () => {
+            popupForm.classList.add("open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popupForm.classList.remove("open");
+        });
+
+
+    </script>
+
 </body>
 </html>

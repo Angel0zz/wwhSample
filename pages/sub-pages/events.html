@@ -66,7 +66,7 @@
     </div>
 
     <div class="s-content">
-        <button>Inquiry Form</button>
+        <button id="openForm">Inquiry Form</button>
         <iframe width="520" height="315"
             src="https://www.youtube.com/embed/Ww7Nvt5LYNk?si=_cO6bK8QrKIEVtnn&autoplay=1&loop=1&mute=1&playlist=Ww7Nvt5LYNk"
             title="YouTube video player"
@@ -79,6 +79,53 @@
     </div>
 
 </div>
+
+<div class="popupForm" id="popupForm">
+    <span class="closeForm" id="closeForm">&times;</span>
+    <div class="form-content">
+        <h2>Meetings and Events</h2>
+        <form action="">
+            <section>
+                <input type="text" name="name" id="name" placeholder="Name *" required>
+                <input type="text" name="company" id="company" placeholder="Company *" required>
+                <input type="email" name="email" id="email" placeholder="Email *" required>
+            </section>
+            <section>
+                <input type="number" name="telephone" id="telephone" placeholder="Telephone *" required>
+                <select name="event-type" id="event-type" required>
+                    
+                    <option value="">Type of Event</option>
+                    <option value="corporate-meeting">Corporate Meeting</option>
+                    <option value="social-banquet">Social Banquet</option>
+                </select>
+                <input type="number" name="number-pax" id="number-pax" placeholder="Number of Pax *" required>
+            </section>
+            <section>
+                <!-- Only 2 inputs -->
+                <input type="datetime-local" id="start-date" class="start-date" placeholder="Start Date *" required>
+                <input type="datetime-local" id="end-date" class="end-date"  placeholder="End Date *" required>
+                
+
+
+                <select name="set-up" id="set-up" required>
+                    <option value="">Set-up</option>
+                    <option value="round">Round</option>
+                    <option value="classroom">Classroom</option>
+                    <option value="boardroom">Boardroom</option>
+                    <option value="u-shape">U-Shape</option>
+                    <option value="cocktail-reception">Cocktail Reception</option>
+                    <option value="theatre">Theatre</option>
+                    <option value="other">Other</option>
+                </select>
+            </section>
+
+            <textarea name="" id="" cols="65" rows="5" placeholder="Special Instruction"></textarea>
+
+            <button id = "openForm">Submit</button>
+        </form>
+    </div>
+</div>
+
 
     <div class="gallery-container">
         <div class="title">
@@ -104,10 +151,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/script/OnScrollAnimtion.js"></script>
-    <script src="/script/roomsSlides.js"></script>
-
     <footer>
         <div class="img-footer">
             <img src="/img-assets/logo-light-1.png" alt="">
@@ -122,7 +165,31 @@
             <br>
             <p>5PM to 9AM: +63 917 658 9481</p>
         </div>
-
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/script/OnScrollAnimtion.js"></script>
+    <script src="/script/roomsSlides.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        flatpickr("input[type=datetime-local]", {});
+    </script>
+
+    <script>
+        const openBtn = document.getElementById("openForm");
+        const closeBtn = document.getElementById("closeForm");
+        const popupForm = document.getElementById("popupForm");
+
+        openBtn.addEventListener("click", () => {
+            popupForm.classList.add("open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popupForm.classList.remove("open");
+        });
+
+
+    </script>
 </body>
 </html>
