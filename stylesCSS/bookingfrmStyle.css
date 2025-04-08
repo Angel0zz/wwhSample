@@ -1,13 +1,17 @@
+div{
+
+}
 form#bookingForm{
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 20px;
     position: relative;
     z-index: 1000;
+    height: 45vh;
+    width: 30%;
     input{
         width: 20vw;
-        height:100%;
+        height:50px;
         background-color:transparent;
         color: #ffff;
         border: 1px solid rgb(141, 141, 141);
@@ -177,7 +181,6 @@ form#bookingForm{
 
 @media (min-width: 1608px) {
     form#bookingForm {
-        display: flex !important;
         flex-direction: column !important;
         gap: 3em !important;
         z-index: 5 !important;
@@ -188,7 +191,7 @@ form#bookingForm{
     }
     input{
         width: 20vw;
-        height:100%  !important;
+        height:150%  !important;
         font-size: 100% !important;
     }
 
