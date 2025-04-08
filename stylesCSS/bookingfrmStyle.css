@@ -32,18 +32,18 @@ form#bookingForm{
 
     button{
         width: 20vw;
-        height: 100%;
+        height: 40px;
         font-weight: 400;
         font-size: 110%;
         border-radius: 5px;
         background-color: #a39f9f;
         border: none;
-        transition: 0.5s all ease-in-out;
+        transition: 0.2s all ease-in-out;
         position: relative;
 
     }
     button:hover{
-        background-color: rgb(1,1,42);
+        background-color: rgb(1, 1, 163);
         color: #f8f9fa;
         position: relative;
 
