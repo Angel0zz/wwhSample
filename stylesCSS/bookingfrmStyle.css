@@ -8,7 +8,7 @@ form#bookingForm{
     position: relative;
     z-index: 1000;
     height: 45vh;
-    width: 30%;
+    width: 25%;
     input{
         width: 20vw;
         height:50px;
