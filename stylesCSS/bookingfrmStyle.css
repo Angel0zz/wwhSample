@@ -184,18 +184,18 @@ form#bookingForm{
         width: 70%;
         top: 90px;
         height: 90%;
-        background-color:rgba(255, 255, 255,0.8);
+        background-color:rgba(0, 0, 0, 0.3);
         padding: 8px;
         border-radius: 5px;
 
         .title{
-            color: #333333;
+            color: #ffffff;
         }
         input{
             width: 90%;
             height:35px;
             background-color:transparent;
-            color: #000000;
+            color: #ffffff;
             border: 1px solid rgb(141, 141, 141);
             border-radius: 5px;
             font-style: italic;
@@ -204,7 +204,7 @@ form#bookingForm{
         }
         label {
             font-size: 80%;
-            color: #000000;
+            color: #ffffff;
             text-shadow: 0  0px 0px rgb(33, 33, 33);
             position: relative;
     
