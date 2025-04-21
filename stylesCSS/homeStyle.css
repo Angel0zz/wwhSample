@@ -239,6 +239,7 @@ html{
             color: rgb(90, 90, 90);
         }
     }
+
     
 
 }
@@ -326,5 +327,187 @@ html{
         
         }
     }
+
+    .sec-container{
+        .content-container{
+            .bg-text{
+                width: 60%;
+                margin: 3em;
+                p.title{
+                    font-size: 20px;
+                }
+                p:not(p.title){
+                    line-height: 110%;
+                    font-size: 70%;
+                    text-align: justify;
+                    color: rgb(218, 221, 223);
+                    font-family: 'Times New Roman', Times, serif;
+                }
+        
+                a{
+                    margin-top: 100%;
+                    text-decoration: none;
+                    border: 1px solid;
+                    padding: 10px 40px;
+                    color: aliceblue;
+                    
+                }
+                a:hover{
+                    background-color: #000;
+                    
+                }
+            }
+        }
+    
+    }
+
+
+    .tir-container{
+        flex-direction: column;
+        height: 40vh;
+        padding-inline: 10px;
+        justify-content: center;
+        align-items: center;
+        color: rgb(90, 90, 90);
+        gap: 2em;
+    
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(90, 90, 90);
+        width: 80%;
+        height: 35%;
+        
+        p{
+            text-align: justify;
+            font-size: 13px;
+        }
+        
+        img{
+            margin-top: 20px;
+            margin-left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    section.text-img-cont{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.por-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-direction: row;
+    justify-content: center;
+    color:rgb(29, 28, 26);
+    padding-block: 10px;
+    div{
+        width: 40%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        text-align: justify;
+        padding-inline: 5px;
+        
+        section{
+            font-size: 20px;
+            
+
+        }
+        p{
+            color: rgb(90, 90, 90);
+            font-size: 10px;
+        }
+    }
+
+    
+
+}
+
+.map-container{
+    height: 35vh;
+    background-color:black;
+    display: flex;
+    
+    
+    .map-title{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 60px; 
+        
+        p{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .tri-separator{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+
+            .red{
+                width: 40%;
+                height: 2px;
+                background-color: #e63552;
+            }
+
+            .yellow{
+                width: 40%;
+                height: 2px;
+                background-color: #fbcc0a;
+            }
+
+            .purple{
+                width: 40%;
+                height: 2px;
+                background-color: #743a6d;
+            }
+        }
+        
+        .map-text{
+            display: flex;
+            font-size: 60%;
+            margin-top: 40px;
+
+            section{
+                width: 50%;
+                padding-inline: 9%;
+                text-align: justify;
+                color: rgb(213, 212, 224);
+                font-weight: 300;
+                font-size: 10px;
+            }
+        }
+        
+    }
+
+    .map-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;    
+        
+        iframe{
+            width: 80%;
+            height:50%;
+        }
+    }
+}
+
     
 }
