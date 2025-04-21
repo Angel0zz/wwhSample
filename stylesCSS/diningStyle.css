@@ -374,5 +374,18 @@
 
     }
     }
-
+    .hero-info-container{
+        height: 100vh;
+        .hero-container{
+            padding: 0;
+            flex-direction: column;
+            .info-det{
+                width: 100%;
+            }
+            .hero{
+                width: 100%;
+                
+            }
+        }
+    }
 }
