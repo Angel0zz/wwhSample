@@ -182,16 +182,20 @@ form#bookingForm{
 @media (max-width: 460px) {
     form#bookingForm {
         width: 70%;
+
+        section{
+            position: relative;
+            top: 100px;
+        }
         input{
             width: 90%;
-            height:50px;
+            height:35px;
             background-color:transparent;
             color: #ffff;
             border: 1px solid rgb(141, 141, 141);
             border-radius: 5px;
             font-style: italic;
             padding-left: 5px;
-            position: relative;
     
         }
     }
