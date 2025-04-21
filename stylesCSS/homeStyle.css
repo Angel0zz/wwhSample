@@ -326,8 +326,16 @@ html{
     .main-bg{
 
         .top-nav-header{
-            display:none ;
+
+            .logo-container{
+                width: 10%;
+                width: 100%;
+            }
+            .socials-container{
+                display: none;
+            }
         }
+
         .main-nav-container{
             display: grid;
             grid-template-columns: auto auto auto;
