@@ -396,7 +396,10 @@
             width: 100vw;
             flex-direction: column;
             height: auto;
-        
+            gap: 2em;
+        }
+        .t-cont{
+            gap: 2em;
         }
     }
 }
