@@ -35,7 +35,7 @@ html{
         align-items: center;
         background-color: rgba(1, 1, 42, 0.1);
         height: 80px;
-        width: 100;
+        width: 100%;
 
         
         .socials-container{
@@ -43,6 +43,7 @@ html{
             gap: 2em;
             font-size: 180%;
         }
+        
     }
 
 
@@ -320,7 +321,13 @@ html{
 
 @media(max-width:460px){
 
+
+
     .main-bg{
+
+        .top-nav-header{
+            display:none ;
+        }
         .main-nav-container{
             display: grid;
             grid-template-columns: auto auto auto;
