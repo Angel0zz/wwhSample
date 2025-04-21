@@ -182,7 +182,7 @@ form#bookingForm{
 @media (max-width: 460px) {
     form#bookingForm {
         width: 70%;
-        top: 100px;
+        top: 90px;
         height: 90%;
         background-color:rgba(255, 255, 255,0.8);
         padding: 8px;
