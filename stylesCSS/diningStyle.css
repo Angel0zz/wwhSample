@@ -294,3 +294,85 @@
         }
     }
 }
+
+
+@media (max-width:460px){
+    .head-bg{
+        .title{
+            top: 60%;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+        
+        
+        }
+    }
+
+    .container{
+        .info{
+            font-size: 18px;
+            width: 80%;margin-top: 10%;
+        }
+        
+    .carousel-cont {
+        display: flex;
+        align-items: center;
+  
+        height: 50vh;
+        width: 100;
+        gap: 1em;
+        transition: background-image 0.5s ease; 
+        .card{
+            position: relative;
+            height: 70%;
+            width: 30%;
+            background-color: #fff;
+            border:1px solid #fbcc0a;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+            color: black;
+            overflow: hidden;
+            cursor: pointer;
+            .img-cont{
+                width: 100%;
+                height: 70%;
+                background-color: #fbcc0a;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text{
+                display: flex;
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                padding-top: 10px;
+                padding-inline: 10px;
+                text-align: center;
+            }
+            .details{
+                position:relative;
+                top: 100%;
+                padding: 30px;
+                font-weight: 300;
+                background-color: rgba(0, 0, 0,0.4);
+                color: #fff;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                transition: 0.5s ease-in-out;
+   
+            }
+        }
+
+    }
+    }
+
+}
