@@ -317,15 +317,15 @@
     .carousel-cont {
         display: flex;
         align-items: center;
-  
-        height: 50vh;
+        flex-direction: column;
+        height: 150vh;
         width: 100;
         gap: 1em;
         transition: background-image 0.5s ease; 
         .card{
             position: relative;
-            height: 70%;
-            width: 30%;
+            height: 90%;
+            width: 70%;
             background-color: #fff;
             border:1px solid #fbcc0a;
             box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
