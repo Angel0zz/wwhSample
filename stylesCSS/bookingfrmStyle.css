@@ -182,11 +182,8 @@ form#bookingForm{
 @media (max-width: 460px) {
     form#bookingForm {
         width: 70%;
-
-        section{
-            position: relative;
-            top: 100px;
-        }
+        top: 100px;
+ 
         input{
             width: 90%;
             height:35px;
