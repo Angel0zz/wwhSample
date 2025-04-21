@@ -388,4 +388,15 @@
             }
         }
     }
+    .list-cont{
+        width: 100vw;
+
+        .f-cont{
+            display: flex;
+            width: 100vw;
+            flex-direction: column;
+            height: auto;
+        
+        }
+    }
 }
