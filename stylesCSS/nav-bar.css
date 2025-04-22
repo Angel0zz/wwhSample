@@ -31,6 +31,8 @@ a{
     transition: top 0.3s;
     z-index: 10000;
     padding: 20px;
+    transition: top 0.3s, opacity 0.3s, transform 0.3s;
+
     .lg img{
         height: 100%;
         width: 80%;
@@ -124,7 +126,15 @@ a{
     font-style: none;
 }
 
+@media(max-width:460px){
+    footer {
+        height: 70vh;
 
+    .address-footer {
+        height: 60vh;
+        }
+    }
+}
 
 @media (max-width: 900px) {
     #navbar{

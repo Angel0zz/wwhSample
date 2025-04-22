@@ -1,4 +1,3 @@
-
 .head-bg{
     display: flex;
     justify-content: center;
@@ -303,16 +302,30 @@
             justify-content: center;
             text-align: center;
             font-size: 30px;
-        
-        
+
+            p {
+                margin-top: 5px;
+                font-size: 15px;
+            }
         }
     }
 
-    .container{
+    .container{        
         .info{
             font-size: 18px;
             width: 80%;margin-top: 10%;
+            p {
+                margin-top: 165px;
+            }
         }
+
+    .container-crsl {
+        .carousel-title {
+            margin-top: 55px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
         
     .carousel-cont {
         display: flex;
@@ -376,11 +389,24 @@
     }
     .hero-info-container{
         height: 100vh;
+        .hero-title {
+            margin-top: -80px;
+        }
+    
         .hero-container{
             padding: 0;
             flex-direction: column;
             .info-det{
                 width: 100%;
+            }
+            .hero-name {
+                font-size: 20px;
+                margin-top: -5px;
+                
+            }            
+
+            section ul li {
+                font-size: 15px;
             }
             .hero{
                 width: 100%;

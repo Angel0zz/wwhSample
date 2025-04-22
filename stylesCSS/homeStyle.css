@@ -379,7 +379,7 @@ html{
 
     .tir-container{
         flex-direction: column;
-        height: 40vh;
+        height: 55vh;
         padding-inline: 10px;
         justify-content: center;
         align-items: center;
@@ -397,6 +397,7 @@ html{
         p{
             text-align: justify;
             font-size: 13px;
+            margin-top: 30px;
         }
         
         img{
@@ -410,6 +411,7 @@ html{
     section.text-img-cont{
         img{
             width: 100%;
+            height: 25vh;
         }
     }
 }
@@ -421,10 +423,11 @@ html{
     flex-direction: row;
     justify-content: center;
     color:rgb(29, 28, 26);
-    padding-block: 10px;
+    height: 45vh;
     div{
         width: 40%;
-        height: 250px;
+
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -452,7 +455,7 @@ html{
 }
 
 .map-container{
-    height: 35vh;
+    height: 40vh;
     background-color:black;
     display: flex;
     
@@ -463,7 +466,7 @@ html{
         width: 50%;
         text-align: center;
         font-size: 15px;
-        margin-top: 60px; 
+         
         
         p{
             font-family: 'Times New Roman', Times, serif;
@@ -496,16 +499,15 @@ html{
         
         .map-text{
             display: flex;
-            font-size: 60%;
+            font-size: 50%;
             margin-top: 40px;
 
             section{
                 width: 50%;
-                padding-inline: 9%;
                 text-align: justify;
                 color: rgb(213, 212, 224);
                 font-weight: 300;
-                font-size: 10px;
+                font-size: 9px;
             }
         }
         
@@ -520,9 +522,7 @@ html{
         iframe{
             width: 80%;
             height:50%;
+            }
         }
-    }
-}
-
-    
+    }    
 }
