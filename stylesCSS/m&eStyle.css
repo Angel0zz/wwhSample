@@ -1,5 +1,18 @@
+.head-banner-cont {
+    display:flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-image: url('/img-assets/M-and-E-img-Assets/M-and-E-Banner-scaled.jpg'); 
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 98vh; 
+    width: 100vw;
+}
+
 .head-banner-cont:before {
-    top:40%;
+    top: 31%;
     z-index: 0;
     content: '';
     position: absolute;
@@ -9,6 +22,7 @@
     height: 70%; /* Adjust the height of the fade effect */
     background: linear-gradient(to bottom, transparent, rgb(0  ,0 , 0,1)); /* Create the fade effect */
 }
+
 .banner-title{
      width: auto;
      font-family: 'Montserrat';
@@ -43,7 +57,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     color: black;
 
@@ -78,6 +92,11 @@
         
         .hero,.info-det{
             width: 100%;
+            .wyn-desc {
+                font-style: italic; 
+                font-size: 16px; 
+                font-weight: 300;    
+            }
         }
         .hero{
             display: flex;
@@ -113,13 +132,23 @@
 
 .event-catg-cont{
     text-align: center;
+    display: flex; 
+    flex-direction:column;
+    padding-block: 50px;
+    color:black; 
+    align-items:center;
+    width: 100; 
+    height: 70vh; 
+    background-color: rgb(255, 255, 255);
+    
     p{
         font-size: 24px;
+        font-family: 'Montserrat';
     }
-    p.info{
-        width: 60%;margin-top: 10px;
-        font-size: 16px;
-        
+    p.main-text{
+        width: 60%;
+        margin-top: 10px;
+        font-size: 16px;       
     }
     
     .choices-cont{
@@ -130,11 +159,31 @@
         width: 70%;
         height:70%;
 
+        .meetings-box {
+            background-image: url(/img-assets/M-and-E-img-Assets/M-and-E-Events-Main-scaled-570x380.jpg);
+        }
+
+        .title {
+            .headT {
+                font-family: 'Montserrat'; 
+                font-weight: 400; 
+                color: black; 
+            }
+
+            .main-text {
+                    font-size: 16px; 
+                    color: black;
+            }
+
+            .sub-text {
+                    font-size: 80%; 
+                    color: rgb(110, 110, 110);
+            }
+        }
     }
 }
 a{
     text-decoration: none;
-
     width: 100%;
 }
 .meetings-box, .events-box{
@@ -344,6 +393,119 @@ tbody tr:first-child {
         background-color: black;
         color: #fff;padding: 10px 20px;
         border-radius: 5px; margin-left:20% ;
+        }   
+    }
+}   
+
+@media (max-width: 460px) {
+    .head-banner-cont {
+        height: 60vh;
+    }
+
+    .head-banner-cont:before {
+        height: 35vh;
+    }
+
+    .banner-title {
+        margin-top: -45px;
+    }
+    
+    .banner-box {
+        width: 80%;
+    }
+
+    .f-content {
+        
+        p {
+            margin-top: 100px;
+        }
+    }
+
+    .hero-info-container {
+        justify-content: center;
+        margin-top: 60px;
+        padding-bottom: 30px;
+
+        .hero-title {
+            justify-content: center;
+            text-align: center;
+            width: 70vw;
+        }
+
+        .hero-container {
+            .info-det {
+                .wyn-desc {
+                    font-style: italic; 
+                    font-size: 16px; 
+                    font-weight: 300;    
+                    width: 70vw;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                p {
+                    width: 70vw;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: -42px;   
+                }             
+            }
+
+            section {
+                width: 70vw;
+                justify-content: center;
+                align-items: center;
+                margin-left: -55px;   
+            }
+        }
+    }
+
+    .event-catg-cont{
+        height: auto;
+        
+        p {
+        width: 90%;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 40px;
+        }   
+
+    .choices-cont {
+        width: 60%;
+        margin: 0 0 0 -45px;
+        display: flex;
+        flex-direction: column;
+        gap: 100px; /* space between meeting and event box */
+
+        .meetings-box {
+            height: 30vh;
+        }
+
+        .events-box {
+            height: 30vh;
+        }
+
+        .title {
+            height: auto;
+            top: 50px;
+
+            .headT { 
+                text-align: center;
+                width: 100%;
+                
+            }
+
+            .main-text {
+                display: none;
+            }
+
+            .sub-text {
+                    text-align: center;
+                    width: 100%;
+                    font-size: 11px;
+                    margin-top: -35px;
+                }
+            }
+        }        
     }
 }
-}   
