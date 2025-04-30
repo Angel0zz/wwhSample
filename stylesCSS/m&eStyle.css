@@ -27,7 +27,7 @@
      width: auto;
      font-family: 'Montserrat';
      padding: 20px 50px;
-     font-size: 3em;
+     font-size: 1.8em;
      font-weight: 300;
      position: relative;
      top: 230px;
@@ -390,6 +390,7 @@ tbody tr:first-child {
     color: black;
     padding: 20px;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.05);
+    font-size: 0.8em;
     span{
         background-color: black;
         color: #fff;padding: 10px 20px;
@@ -400,15 +401,15 @@ tbody tr:first-child {
 
 @media (max-width: 460px) {
     .head-banner-cont {
-        height: 60vh;
+        height: 75vh;
     }
 
     .head-banner-cont:before {
-        height: 35vh;
+        height: 45vh;
     }
 
     .banner-title {
-        margin-top: -45px;
+        margin-top: -1px;
     }
     
     .banner-box {

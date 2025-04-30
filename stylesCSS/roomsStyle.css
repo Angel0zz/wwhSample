@@ -296,6 +296,10 @@ li:hover {
 
 /* RESPONSIVE VIEW */
 @media (max-width: 600px) { 
+    .head-bg {
+        height: 55vh;
+    }
+    
     .text {
         height: 130px;
         padding: 0 0 0 20px;        

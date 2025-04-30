@@ -331,7 +331,7 @@
 
 @media (max-width: 460px) {
     .room-img-container {
-        min-height: 600px;
+        height: 75vh;
         background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -343,6 +343,10 @@
             left: 30px;
             z-index: 10;
         }
+    }
+
+    .room-img-container:before {
+        height: 35vh;
     }
 
     .form-main-container {
