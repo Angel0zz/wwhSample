@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/stylesCSS/rooms-page.css">
     <link rel="stylesheet" href="/stylesCSS/nav-bar.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/stylesCSS/bookingfrmStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <title>Wynwood - Rooms</title>
 </head>
 <body>
@@ -33,17 +36,52 @@
     <div class="upper-container">
             <form id="form-container">
                 <section>
-                    <label id = "checkin-checkout-label">Check-in - Check-out</label><br>
-                    <input type="text" id="checkin-checkout" name="checkInData" readonly placeholder="Check-in - Check-out">                      
+                    <label id="checkin-checkout-label">Check-in - Check-out</label><br>
+                    <input type="text" id="checkin-checkout"  name="checkInData" readonly placeholder="Check-in - Check-out">              
+                    
+                    <div id="date-picker-modal" class="modal">
+                        <div class="modal-header">Check-in Date</div>
+                        <input type="date" id="checkInDate" name="checkin-date" required>
+
+                        <div class="modal-header">Check-out Date</div>
+                        <input type="date" id="checkOutDate" name="checkout-date" req>
+                    </div>
                 </section>
     
                 <section class="guest-section">
                     <label for="">Guests</label><br>
-                    <input class="guest-input" type="num-guest-modal" id="num-guest-modal">
+                    <input type="text" class="num-guest-selector" id="num-guest-selector" readonly  onclick="PickNumberofGuest()">
+                
+                    <section class="num-guest-modal" id="num-guest-modal" >
+                        <section>
+                            <label for="">number of adult</label><br>
+                            <div>
+                                <input type="number" id="Adults" name="Adults" placeholder="Number of adults" min="1" value="1"  readonly>Adults
+                                <section onclick="updateValue('Adults', 'increment')">+</section>
+                                <section onclick="updateValue('Adults', 'decrement')">-</section>
+                            </div>
+
+                          
+                        </section>
+                
+                        <section>
+                            <label for="">number of children</label><br>
+                            <div style="border-inline:  1px solid black;">
+                                <input type="number" id="Children" name="Children" placeholder="Number of children" min="0" value="0"  readonly>Children
+                                <section onclick="updateValue('Children', 'increment')">+</section>
+                                <section onclick="updateValue('Children', 'decrement')">-</section>
+                            </div>
+                        </section>
+
+
+                        <section style="padding-block: 20px; display: flex;">
+                           <span style="font-size: 10px;">Total number of Guests</span> <br><section style="height: 30px; width: 80px;font-size: 15px; "  onclick="updateGuestCount()">Update</section>
+                        </section>
+                    </section>
                 </section>
                 
                 <section>
-                    <label for="">  Promo Code(if applicable)</label> <br>       
+                    <label for="">Promo Code(if applicable)</label> <br>       
                     <input type="text" placeholder="Enter Promo Code">
                 </section>
         
@@ -284,7 +322,6 @@
     </footer>
 <script src="/script/OnScrollAnimtion.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-
+<script src="/script/bookfrmScript.js"></script>
 </body>
 </html>

@@ -329,7 +329,7 @@
 }
 
 
-@media (max-width: 460px) {
+@media (max-width: 460px) {    
     .room-img-container {
         height: 75vh;
         background-position: center top;

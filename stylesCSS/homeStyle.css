@@ -240,9 +240,6 @@ html{
             color: rgb(90, 90, 90);
         }
     }
-
-    
-
 }
 
 
@@ -319,14 +316,9 @@ html{
     }
 }
 
-@media(max-width:460px){
-
-
-
+@media(max-width:460px){    
     .main-bg{
-
         .top-nav-header{
-
             .logo-container{
                 width: 10%;
                 width: 100%;

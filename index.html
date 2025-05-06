@@ -55,7 +55,7 @@
                 <div class="title" style="font-size: 30px; font-style: italic;">Hospitality throught prism</div>
                 <section>
                     <label id="checkin-checkout-label">Check-in - Check-out</label><br>
-                    <input type="Text" id="checkin-checkout"  readonly value="Check-in - Check-out">
+                    <input type="text" id="checkin-checkout"  name="checkInData" readonly placeholder="Check-in - Check-out">
                     
                     
                     <div id="date-picker-modal" class="modal">
@@ -72,16 +72,14 @@
                     <label for="">Guests</label><br>
                     <input type="text" class="num-guest-selector" id="num-guest-selector" readonly  onclick="PickNumberofGuest()">
                 
-                    <section class="num-guest-modal" id="num-guest-modal" >
+                    <section class="num-guest-modal" id="num-guest-modal">
                         <section>
                             <label for="">number of adult</label><br>
                             <div>
                                 <input type="number" id="Adults" name="Adults" placeholder="Number of adults" min="1" value="1"  readonly>Adults
                                 <section onclick="updateValue('Adults', 'increment')">+</section>
                                 <section onclick="updateValue('Adults', 'decrement')">-</section>
-                            </div>
-
-                          
+                            </div>                        
                         </section>
                 
                         <section>
@@ -98,7 +96,6 @@
                            <span style="font-size: 10px;">Total number of Guests</span> <br><section style="height: 30px; width: 80px;font-size: 15px; "  onclick="updateGuestCount()">Update</section>
                         </section>
                     </section>
-                  
                 </section>                
 
  
