@@ -217,7 +217,7 @@ form#bookingForm{
         margin: auto;
         padding: 10px;
         box-sizing: border-box;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         
